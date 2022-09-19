@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+ 
+<input type="text" id="forUser" size="40" placeholder = 'Enter your text here'>
+<input type="button" id="answer" value="Submit">
+<output id="output">  
+ 
+ 
+<script>
+ 
+ var x;
+var answer = document.getElementById("answer");
+answer.onclick = function() {
+  x = document.getElementById("forUser").value;
+  console.log(x);
+  x = x.replace(/[^qruopsdgjcb]/gi, '');
+  x = x.toUpperCase();
+  console.log(x);
+  document.getElementById("output").innerHTML = x;
+};
+</script>
+ 
+</body>
+
+</html>
